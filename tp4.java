@@ -20,6 +20,7 @@ public class tp4 {
         name=scanner.next();
 
         System.out.println("El nombre ingresado es: "+name);
+        
         /*Ejercicio3 */
         int number3;
         System.out.println("Ingrese un numero entero: ");
