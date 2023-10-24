@@ -1,6 +1,4 @@
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
 import java.util.Random;
 /*EJERCICIOS (1)(2)(3)*/
 class Perro{

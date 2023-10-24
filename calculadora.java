@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import javax.print.DocFlavor.STRING;
 public class calculadora {
     public static void main(String[] args) throws Exception{
         Scanner scanner = new Scanner(System.in);
@@ -37,7 +36,7 @@ public class calculadora {
                         System.out.println(num4_1+"/"+num4_2+"="+r);}      
                 }else if(opcion_4==5){
                     System.out.println("");
-                    break;
+                    
                 }
         
         
