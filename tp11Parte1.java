@@ -174,4 +174,5 @@ class Articulo {
     public int getCantidad() {
         return cantidad;
     }
+    /* */
 }
