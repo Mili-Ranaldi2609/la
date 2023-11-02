@@ -58,7 +58,7 @@ public class tp11Parte1 {
         factura.imprimirFactura();
         
 
-        
+    scanner.close();   
 
 }}
 /////////////////////////////////////////////////

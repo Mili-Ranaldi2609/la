@@ -76,5 +76,5 @@ public class tp11Parte2 {
             }
         }
         System.out.println("Números menores al promedio: " + menoresAlPromedio);
-
+        scr.close();
 }}
