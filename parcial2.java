@@ -18,8 +18,8 @@ public class parcial2{
                     while (true) {
                         System.out.print("Ingrese la fila " + (i + 1) + " de la secuencia de ADN (exactamente 6 letras): ");
                         String row = scanner.nextLine().toUpperCase();
-                        // Verifica que la fila tenga 6 letras válidas (ATCG):
-                        if (row.length() == 6 && row.matches("[ATCG]+")) {
+                        
+                        if (row.matches("^[ATCG]{6}$")) { // Utiliza una expresión regular para verificar la fila
                             adn[i] = row.toCharArray();
                             break;
                         } else {
@@ -49,6 +49,7 @@ public class parcial2{
 
         // Definir los patrones a buscar para secuencias mutantes
         String[] patrones = {"AAAA", "TTTT", "CCCC", "GGGG"};
+        
         int contadorMutante = 0; // Contador para el número de secuencias mutantes encontradas
         for (int i = 0; i < filas; i++) {
             for (int j = 0; j < columnas; j++) {
