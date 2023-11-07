@@ -28,7 +28,7 @@ public class parcial2{
                     }
                 }
 
-                if (esMutante(adn)) {
+                if (isMutant(adn)) {
                     System.out.println("El humano es mutante (ºOº). Sera reclutado por MAGNETO.");
                 } else {
                     System.out.println("El humano no es mutante (-_-). Prueba finalizada.");
@@ -40,15 +40,16 @@ public class parcial2{
                 System.out.println("Opción inválida. Por favor, elija nuevamente.");
             }
         }
+        scanner.close();
     }
 
-    public static boolean esMutante(char[][] adn) {
+    public static boolean isMutant(char[][] adn) {
         int filas = adn.length;
         int columnas = adn[0].length;
 
         // Definir los patrones a buscar para secuencias mutantes
         String[] patrones = {"AAAA", "TTTT", "CCCC", "GGGG"};
-
+        int contadorMutante = 0; // Contador para el número de secuencias mutantes encontradas
         for (int i = 0; i < filas; i++) {
             for (int j = 0; j < columnas; j++) {
                 // Verificar los patrones en todas las direcciones
@@ -57,7 +58,8 @@ public class parcial2{
                     if (j + patron.length() <= columnas) {
                         String secuencia = new String(adn[i], j, patron.length());
                         if (secuencia.equals(patron)) {
-                            return true;
+                            contadorMutante++;
+                            
                         }
                     }
 
@@ -68,7 +70,8 @@ public class parcial2{
                             secuencia.append(adn[i + k][j]);
                         }
                         if (secuencia.toString().equals(patron)) {
-                            return true;
+                            contadorMutante++;
+                            
                         }
                     }
 
@@ -79,7 +82,8 @@ public class parcial2{
                             secuencia.append(adn[i + k][j + k]);
                         }
                         if (secuencia.toString().equals(patron)) {
-                            return true;
+                            contadorMutante++;
+                            
                         }
                     }
 
@@ -90,13 +94,19 @@ public class parcial2{
                             secuencia.append(adn[i + k][j - k]);
                         }
                         if (secuencia.toString().equals(patron)) {
-                            return true;
+                            contadorMutante++;
+                            
                         }
                     }
                 }
             }
         }
-
-        return false;
-    }
-}
+        if  (contadorMutante > 1){
+            return true;
+        }else{
+            return false;
+        }
+        
+    
+        
+}}
