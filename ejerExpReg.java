@@ -248,5 +248,6 @@ public class ejerExpReg {
         } else {
             System.out.println("La contraseña no es valida.");
         }
+        scr.close();
     }
 }
