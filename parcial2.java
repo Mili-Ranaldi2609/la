@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 
 public class parcial2{
@@ -14,6 +15,7 @@ public class parcial2{
 
             if (option.equals("1")) {
                 char[][] adn = new char[6][6];
+                
                 for (int i = 0; i < 6; i++) {
                     while (true) {
                         System.out.print("Ingrese la fila " + (i + 1) + " de la secuencia de ADN (exactamente 6 letras): ");
@@ -46,11 +48,13 @@ public class parcial2{
     public static boolean isMutant(char[][] adn) {
         int filas = adn.length;
         int columnas = adn[0].length;
+        
 
         // Definir los patrones a buscar para secuencias mutantes
         String[] patrones = {"AAAA", "TTTT", "CCCC", "GGGG"};
         
         int contadorMutante = 0; // Contador para el número de secuencias mutantes encontradas
+        
         for (int i = 0; i < filas; i++) {
             for (int j = 0; j < columnas; j++) {
                 // Verificar los patrones en todas las direcciones
